@@ -1,0 +1,76 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.calculator {
+	flex: 0 0 95%;
+}
+
+.screen {
+	width: 100%;
+	font-size: 7rem;
+	padding: 0.5rem;
+	background: rgb(41, 41, 56);
+	color: white;
+	border: none;
+}
+
+.buttons {
+	display: flex;
+	flex-wrap: wrap;
+	/*The flex-wrap property accepts 3 different values:
+nowrap (default): single-line which may cause the container to overflow
+wrap: multi-lines, direction is defined by flex-direction
+wrap-reverse: multi-lines, opposite to direction defined by flex-direction
+	the flex-direction is set to the default value: row.*/
+	transition: all 0.5s linear;
+}
+
+button {
+	flex: 0 25%;
+	/*This is the shorthand for flex-grow, flex-shrink and flex-basis. The second and third parameters (flex-shrink and flex-basis) are optional.*/
+	padding: 0.25rem 0;
+	transition: all 2s ease-out;
+	/*all means all properties which can get animated*/
+}
+
+button:hover {
+	background: blue;
+}
+
+.btn-yellow {
+	background: rgb(245, 146, 60);
+	color: white;
+}
+
+.btn-grey {
+	background: rgb(224, 224, 150);
+}
+
+.btn,
+.btn-equal,
+.btn-clear,
+.btn-delete {
+	font-size: 3rem;
+}
+
+.btn-equal {
+	background: green;
+}
+
+.btn-delete {
+	background: red;
+}
+
+.btn-clear {
+	background: rgb(150, 0, 0);
+}
